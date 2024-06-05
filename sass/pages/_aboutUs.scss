@@ -23,4 +23,10 @@
             border-radius: 0;
         }
     }
+    .heading-fourth{
+        margin-bottom: 3rem;
+        @include respond (tab-port-before){
+            margin-bottom: 2rem;
+        }
+    }
 }

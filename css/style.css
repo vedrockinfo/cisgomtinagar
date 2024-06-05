@@ -1320,6 +1320,12 @@ footer {
     padding: 3px;
     border-radius: 0; }
 
+.about-us .heading-fourth {
+  margin-bottom: 3rem; }
+  @media only screen and (max-width: 768px) {
+    .about-us .heading-fourth {
+      margin-bottom: 2rem; } }
+
 section.marq-section {
   background: #cb3236;
   padding: 5px 0;
