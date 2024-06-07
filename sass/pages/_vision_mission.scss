@@ -1,0 +1,155 @@
+.our-mission {
+    @include respond (tab-land-before) {
+        .mission-img {
+            text-align: center;
+            margin-bottom: 2rem;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                max-height: 50rem;
+                object-position: 100% 39%;
+            }
+        }
+    }
+
+    @include respond (tab-land-after) {
+        h2.primary-heading {
+            text-align: left;
+        }
+
+        .mission-img {
+            float: right;
+            margin-left: 2rem;
+            width: 20rem;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            transition: $transition;
+
+            &:hover {
+                box-shadow: rgba($colorSkyBlue, 0.4) -5px 5px,
+                    rgba($colorSkyBlue, 0.3) -7.5px 7.5px,
+                    rgba($colorSkyBlue, 0.2) -10px 10px,
+                    rgba($colorSkyBlue, 0.1) -12.5px 12.5px,
+                    rgba($colorSkyBlue, 0.05) -15px 15px;
+
+                img {
+                    transform: scale(1.1);
+                }
+            }
+
+            img {
+                transition: $transition;
+            }
+        }
+    }
+}
+
+.our-vision {
+    padding: 7rem 0;
+
+    @include respond(tab-land-before) {
+        padding: 5rem 0;
+    }
+
+    @include respond(tab-port-before) {
+        padding: 3rem 0;
+    }
+
+    background: rgba($colorNavyBlue, 1);
+    position: relative;
+
+    &::before {
+        content: "";
+        background-image: url(../Images/vision-bg-01.jpg);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        mix-blend-mode: color-burn;
+        opacity: 1;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .container {
+        position: relative;
+    }
+}
+
+.our-philosphy {
+    .heading-fourth {
+        margin: 4rem 0 2.5rem;
+    }
+
+    ul {
+        li {
+            a {
+                color: inherit;
+            }
+        }
+    }
+}
+
+.director-message {
+    padding: 7rem 0;
+    @media screen and (min-width:575.1px) and (max-width:768px) {
+        overflow-x: hidden;
+    }
+
+    @include respond(tab-land-before) {
+        padding: 5rem 0;
+    }
+
+    @include respond(tab-port-before) {
+        padding: 3rem 0;
+    }
+
+    @include respond (tab-port-after) {
+        background-image: linear-gradient(90deg, rgba($colorBlack, 0.025) 50%, $colorNavyBlue 50%);
+
+        .col-md-6 {
+            &:last-child {
+                padding-left: 4rem;
+            }
+        }
+    }
+
+    @include respond (tab-port-before) {
+        .col-md-6 {
+            &:last-child {
+                background: rgba($colorNavyBlue, 1);
+                margin-top: 3rem;
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+
+                @include respond (phone-after) {
+                    position: relative;
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        background: rgba($colorNavyBlue, 1);
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                    }
+
+                    &::before {
+                        left: 0;
+                        transform: translateX(-99%);
+                    }
+
+                    &::after {
+                        right: 0;
+                        transform: translateX(99%);
+                    }
+                }
+            }
+
+        }
+    }
+}

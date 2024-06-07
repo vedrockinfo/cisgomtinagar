@@ -1,0 +1,69 @@
+.our-programmes{
+    .row{
+        @media screen and (max-width:768px) {
+            row-gap: 3rem;
+        }
+    }
+    .programmes{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        position: relative;
+        transition: $transition;
+        &::before{
+            content: "";
+            background: $colorNavyBlue;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            transition: $transition;
+        }
+        &:hover{
+            transform: translateY(-3px);
+            &::before{
+                width: 100%;
+            }
+        }
+        @media screen and (min-width:1400px) {
+            height: 42rem;
+        }
+        @media screen and (min-width:992px) and (max-width:1399.9px) {
+            height: 44rem;
+        }
+        @media screen and (min-width:768px) and (max-width:991.9px) {
+            height: 49rem;
+        }
+        .img-wrapper{
+            overflow: hidden;
+            max-height: 20rem;
+            margin-bottom: 3rem;
+            @media screen and (max-width:575px) {
+                margin-bottom: 1.5rem;
+            }
+            &:hover{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+            img{
+                transition: $transition;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+        .heading-fac{
+            @media screen and (max-width:992px) {
+                padding: 0 2rem;
+            }
+        }
+        .content-para{
+            padding: 2rem 2rem 3rem;
+            text-align: center;
+            @media screen and (max-width:575px) {
+                padding: 1rem 2rem 2rem;
+            }
+        }
+    }
+}
